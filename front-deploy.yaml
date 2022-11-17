@@ -36,7 +36,7 @@ spec:
             configMapKeyRef:
               name: munji-cm
               key: REACT_APP_BACKEND_URL
-        image: oduodg/mungi-frontend:f21a4b8a1b34be7214c33e53eaed74b3ab53f428
+        image: oduodg/munji-frontend:915404e5c0fb2aea937a40f98cbf56176f935f5b
         name: munji-front
         ports:
         - containerPort: 3000
