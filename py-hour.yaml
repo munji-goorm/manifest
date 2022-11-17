@@ -5,9 +5,10 @@ metadata:
     app: py-hour
   name: py-hour
 spec:
-  schedule: "15 * * * *"
+  schedule: "43 * * * *"
   jobTemplate:  
     spec:
+      ttlSecondsAfterFinished: 100
       template:
         spec:
           containers:
