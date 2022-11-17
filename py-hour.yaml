@@ -1,36 +1,42 @@
-apiVersion: v1
-kind: Pod
+apiVersion: batch/v1
+kind: CronJob
 metadata:
   labels:
     app: py-hour
   name: py-hour
 spec:
-  containers:
-  - image: ksee1230/py:hour
-    name: py-hour
-    env:
-    - name: DB_HOST
-      valueFrom:
-        configMapKeyRef:
-          name: munji-cm
-          key: DB_HOST
-    - name: DB_PORT
-      valueFrom:
-        configMapKeyRef:
-          name: munji-cm
-          key: DB_PORT
-    - name: DB_USER
-      valueFrom:
-        configMapKeyRef:
-          name: munji-cm
-          key: DB_USER
-    - name: DB_PW
-      valueFrom:
-        secretKeyRef:
-          name: munji-secret
-          key: DB_PW
-    - name: DB_NAME
-      valueFrom:
-        configMapKeyRef:
-          name: munji-cm
-          key: DB_NAME
+  schedule: "15 * * * *"
+  jobTemplate:  
+    spec:
+      template:
+        spec:
+          containers:
+          - image: ksee1230/py:hour
+            name: py-hour
+            env:
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: munji-cm
+                  key: DB_HOST
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: munji-cm
+                  key: DB_PORT
+            - name: DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: munji-cm
+                  key: DB_USER
+            - name: DB_PW
+              valueFrom:
+                secretKeyRef:
+                  name: munji-secret
+                  key: DB_PW
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: munji-cm
+                  key: DB_NAME
+          restartPolicy: OnFailure
