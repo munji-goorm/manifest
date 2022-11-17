@@ -1,0 +1,43 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  labels:
+    app: py-day
+  name: py-day
+spec:
+  schedule: "0 0 * * *"
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 100
+      template:
+        spec:
+          containers:
+          - image: ksee1230/py:day-1.1
+            name: py-day
+            env:
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: munji-cm
+                  key: DB_HOST
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: munji-cm
+                  key: DB_PORT
+            - name: DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: munji-cm
+                  key: DB_USER
+            - name: DB_PW
+              valueFrom:
+                secretKeyRef:
+                  name: munji-secret
+                  key: DB_PW
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: munji-cm
+                  key: DB_NAME
+          restartPolicy: Never
