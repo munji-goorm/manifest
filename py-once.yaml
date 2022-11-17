@@ -34,3 +34,4 @@ spec:
         configMapKeyRef:
           name: munji-cm
           key: DB_NAME
+  restartPolicy: Never
