@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: munji-cm
+data:
+  MYSQL_DATABASE: "ApiExplorer"
+  SPRING_DATASOURCE_URL: "jdbc:mysql://munji-db:3306/ApiExplorer?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC"
+  DB_HOST: "munji-db"
+  DB_PORT: "3306"
+  DB_USER: "root"
+  DB_NAME: "ApiExplorer"
+  HIBERNATE_DDL_AUTO: "update"
+  SPRING_DATASOURCE_USERNAME: "root"
+  REACT_APP_BACKEND_URL: "http://munji-back:8080"

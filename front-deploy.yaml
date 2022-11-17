@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: munji-front
+  name: munji-front
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: munji-front
+  template:
+    metadata:
+      labels:
+        app: munji-front
+    spec:
+      containers:
+      - env:
+        - name: REACT_APP_KAKAOMAP_API_KEY_JS
+          valueFrom:
+            secretKeyRef:
+              name: munji-secret
+              key: REACT_APP_KAKAOMAP_API_KEY_JS
+        - name: REACT_APP_KAKAOMAP_API_KEY_REST
+          valueFrom:
+            secretKeyRef:
+              name: munji-secret
+              key: REACT_APP_KAKAOMAP_API_KEY_REST
+        - name: REACT_APP_STATION_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: munji-secret
+              key: REACT_APP_STATION_API_KEY
+        - name: REACT_APP_BACKEND_URL
+          valueFrom:
+            configMapKeyRef:
+              name: munji-cm
+              key: REACT_APP_BACKEND_URL
+        image: ksee1230/front:1.1
+        name: munji-front
+        ports:
+        - containerPort: 3000
+      restartPolicy: Always
