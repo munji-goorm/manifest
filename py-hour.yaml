@@ -5,7 +5,7 @@ metadata:
     app: py-hour
   name: py-hour
 spec:
-  schedule: "43 * * * *"
+  schedule: "46 * * * *"
   jobTemplate:  
     spec:
       ttlSecondsAfterFinished: 100
