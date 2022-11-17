@@ -6,7 +6,7 @@ metadata:
   name: py-day
 spec:
   containers:
-  - image: ksee1230/py:day
+  - image: ksee1230/py:day-1.1
     name: py-day
     env:
     - name: DB_HOST

@@ -12,7 +12,7 @@ spec:
       template:
         spec:
           containers:
-          - image: ksee1230/py:hour
+          - image: ksee1230/py:hour-1.1
             name: py-hour
             env:
             - name: DB_HOST
