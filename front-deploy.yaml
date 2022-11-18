@@ -42,7 +42,7 @@ spec:
         - containerPort: 3000
         resources:
           requests:
-            cpu: 400m
+            cpu: 300m
           limits:
-            cpu: 600m
+            cpu: 500m
       restartPolicy: Always
