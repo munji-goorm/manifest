@@ -13,7 +13,6 @@ spec:
     metadata:
       labels:
         app: munji-back
-  revisionHistoryLimit: 3
     spec:
       containers:
       - env:
@@ -48,3 +47,4 @@ spec:
           limits:
             cpu: 700m
       restartPolicy: Always
+  revisionHistoryLimit: 3
