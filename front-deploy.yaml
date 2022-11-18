@@ -40,4 +40,9 @@ spec:
         name: munji-front
         ports:
         - containerPort: 3000
+        resources:
+          requests:
+            cpu: 200m
+          limits:
+            cpu: 400m
       restartPolicy: Always
