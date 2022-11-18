@@ -9,6 +9,7 @@ spec:
   selector:
     matchLabels:
       app: munji-front
+  revisionHistoryLimit: 3
   template:
     metadata:
       labels:

@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: munji-back
+  revisionHistoryLimit: 3
     spec:
       containers:
       - env:
