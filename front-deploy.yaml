@@ -40,7 +40,7 @@ spec:
         image: oduodg/munji-frontend:2c40901c8c378e3268bb41678abd4b0f3302b4d9
         name: munji-front
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         resources:
           requests:
             cpu: 200m
