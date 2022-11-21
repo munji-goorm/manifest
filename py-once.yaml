@@ -6,7 +6,7 @@ metadata:
   name: py-once
 spec:
   containers:
-  - image: ksee1230/py:once-1.2
+  - image: ksee1230/py:once-2.0
     name: py-once
     env:
     - name: DB_HOST
