@@ -36,7 +36,7 @@ spec:
             secretKeyRef:
               name: munji-secret
               key: SPRING_DATASOURCE_PASSWORD
-        image: oeckikekk/munjigoorm-back:a12ca03bd70aec9290b4f7c4a2b0d71be0c0e6be
+        image: oeckikekk/munjigoorm-back:d84f8066d174a92628a09db76c3f2fba09f0df8a
         name: munji-back
         ports:
         - containerPort: 8080
