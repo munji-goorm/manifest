@@ -15,7 +15,7 @@ spec:
         app: munji-db
     spec:
       nodeSelector:
-        kubernetes.io/hostname: k8s-worker1
+        kubernetes.io/hostname: ip-192-168-43-193.ap-northeast-2.compute.internal
       containers:
       - env:
         - name: MYSQL_DATABASE
@@ -33,11 +33,11 @@ spec:
         ports:
         - containerPort: 3306
           name: munji-db
-        volumeMounts:
-        - name: db-storage
-          mountPath: /var/lib/mysql
+#        volumeMounts:
+#        - name: db-storage
+#          mountPath: /var/lib/mysql
       restartPolicy: Always
-      volumes:
-        - name: db-storage
-          persistentVolumeClaim:
-            claimName: munji-pvc
+#      volumes:
+#        - name: db-storage
+#          persistentVolumeClaim:
+#            claimName: munji-pvc
