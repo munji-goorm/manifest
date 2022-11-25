@@ -15,7 +15,7 @@ spec:
         app: munji-db
     spec:
       nodeSelector:
-        kubernetes.io/hostname: ip-192-168-43-193.ap-northeast-2.compute.internal
+        kubernetes.io/hostname: ip-192-168-42-112.ap-northeast-2.compute.internal
       containers:
       - env:
         - name: MYSQL_DATABASE
