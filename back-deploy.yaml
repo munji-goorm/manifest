@@ -36,7 +36,7 @@ spec:
             secretKeyRef:
               name: munji-secret
               key: SPRING_DATASOURCE_PASSWORD
-        image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-repo:da7d648ad5b1450cc1896a41792781696da0b695
+        image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-repo:bfd48a10722c300d537c74c025c87e7cac5131f9
         name: munji-back
         ports:
         - containerPort: 8080
