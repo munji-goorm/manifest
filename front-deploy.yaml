@@ -22,21 +22,6 @@ spec:
             secretKeyRef:
               name: munji-secret
               key: REACT_APP_KAKAOMAP_API_KEY_JS
-        - name: REACT_APP_KAKAOMAP_API_KEY_REST
-          valueFrom:
-            secretKeyRef:
-              name: munji-secret
-              key: REACT_APP_KAKAOMAP_API_KEY_REST
-        - name: REACT_APP_STATION_API_KEY
-          valueFrom:
-            secretKeyRef:
-              name: munji-secret
-              key: REACT_APP_STATION_API_KEY
-        - name: REACT_APP_BACKEND_URL
-          valueFrom:
-            configMapKeyRef:
-              name: munji-cm
-              key: REACT_APP_BACKEND_URL
         image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-repo:4f0e5b3cc58c5b932764eeefd3bd7c367e2da5b0
         name: munji-front
         ports:
