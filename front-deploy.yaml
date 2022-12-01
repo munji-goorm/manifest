@@ -4,6 +4,7 @@ metadata:
   labels:
     app: munji-front
   name: munji-front
+  namespace: munji
 spec:
   replicas: 3
   selector:
@@ -17,6 +18,11 @@ spec:
     spec:
       containers:
       - env:
+        - name: REACT_APP_BACKEND_URL
+          valueFrom:
+            configMapKeyRef:
+              name: munji-cm
+              key: REACT_APP_BACKEND_URL
         - name: REACT_APP_KAKAOMAP_API_KEY_JS
           valueFrom:
             secretKeyRef:
@@ -28,7 +34,9 @@ spec:
         - containerPort: 3000
         resources:
           requests:
-            cpu: 200m
+            cpu: 300m
+            memory: 600Mi
           limits:
-            cpu: 400m
+            cpu: 500m
+            memory: 600Mi
       restartPolicy: Always

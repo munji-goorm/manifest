@@ -8,8 +8,6 @@ spec:
   ports:
   - port: 3000
     targetPort: 3000
-#    nodePort: 31234
     protocol: TCP
   selector:
     app: munji-front
-#  type: NodePort

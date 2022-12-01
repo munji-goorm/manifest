@@ -2,13 +2,13 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    app: py-once
-  name: py-once
+    app: py-hour
+  name: py-hour
   namespace: munji
 spec:
   containers:
-  - image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-database-once:a0285769d665f547ea6d11e615c4f62a3343ca9b
-    name: py-once
+  - image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-database-hour:a0285769d665f547ea6d11e615c4f62a3343ca9b
+    name: py-hour
     env:
     - name: DB_HOST
       valueFrom:
@@ -36,3 +36,4 @@ spec:
           name: munji-cm
           key: DB_NAME
   restartPolicy: OnFailure
+

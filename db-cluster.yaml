@@ -1,0 +1,11 @@
+apiVersion: mysql.oracle.com/v2
+kind: InnoDBCluster
+metadata:
+  name: munji-db
+  namespace: munji
+spec:
+  secretName: munji-db-pwds
+  tlsUseSelfSigned: true
+  instances: 3
+  router:
+    instances: 1

@@ -4,6 +4,7 @@ metadata:
   labels:
     app: py-hour
   name: py-hour
+  namespace: munji
 spec:
   schedule: "20 * * * *"
   jobTemplate:  
@@ -12,7 +13,7 @@ spec:
       template:
         spec:
           containers:
-          - image: ksee1230/py:hour-1.2
+          - image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-database-hour:a0285769d665f547ea6d11e615c4f62a3343ca9b
             name: py-hour
             env:
             - name: DB_HOST

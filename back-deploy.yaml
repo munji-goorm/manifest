@@ -4,6 +4,7 @@ metadata:
   labels:
     app: munji-back
   name: munji-back
+  namespace: munji
 spec:
   replicas: 3
   selector:
@@ -30,12 +31,22 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: munji-cm
-              key: SPRING_DATASOURCE_USERNAME
+              key: DB_USER
+        - name: KAKAO_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: munji-secret
+              key: KAKAO_API_KEY
+        - name: OPEN_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: munji-secret
+              key: OPEN_API_KEY
         - name: SPRING_DATASOURCE_PASSWORD
           valueFrom:
             secretKeyRef:
               name: munji-secret
-              key: SPRING_DATASOURCE_PASSWORD
+              key: DB_PW
         image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-backend:b6aa4476b97f965feb89edee082b09d072347759
         name: munji-back
         ports:
@@ -43,8 +54,10 @@ spec:
           name: munji-back
         resources:
           requests:
-            cpu: 200m
+            cpu: 300m
+            memory: 300Mi
           limits:
-            cpu: 400m
+            cpu: 500m
+            memory: 300Mi
       restartPolicy: Always
   revisionHistoryLimit: 3
