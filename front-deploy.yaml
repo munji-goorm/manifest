@@ -28,7 +28,7 @@ spec:
             secretKeyRef:
               name: munji-secret
               key: REACT_APP_KAKAOMAP_API_KEY_JS
-        image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-frontend:cc3387a837b32cc2e55ae0c6fdabd2f87a8ed3dc
+        image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-frontend:2eb3b62a402fad717fc8291c82eff91c9f8d407b
         name: munji-front
         ports:
         - containerPort: 3000
