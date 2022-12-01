@@ -15,9 +15,9 @@ kubectl apply -f db-cluster.yaml
 ## python pod를 통해 db에 값 입력 후 삭제
 kubectl apply -f py-once.yaml
 
-kubectl apply -f py-hour-temp.yaml
+kubectl apply -f py-hour-init.yaml
 
-kubectl apply -f py-day-temp.yaml
+kubectl apply -f py-day-init.yaml
 
 kubectl delete po py-once py-hour py-day
 
