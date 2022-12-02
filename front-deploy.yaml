@@ -22,7 +22,7 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: munji-cm
-              key: REACT_APP_BACKEND_URL
+        image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-frontend:cc3387a837b32cc2e55ae0c6fdabd2f87a8ed3dc
         - name: REACT_APP_KAKAOMAP_API_KEY_JS
           valueFrom:
             secretKeyRef:
