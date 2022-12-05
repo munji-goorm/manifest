@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: Secret
-metadata:
-  name: munji-db-pwds
-  namespace: munji
-stringData:
-  rootUser: "munji"
-  rootHost: "%"
-  rootPassword: "munji2@@"
