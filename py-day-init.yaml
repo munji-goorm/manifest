@@ -7,7 +7,7 @@ metadata:
   namespace: munji
 spec:
   containers:
-  - image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-database-day:a0285769d665f547ea6d11e615c4f62a3343ca9b
+  - image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-database-day:2556b78f610632a01661cd580fb8dc3f689da4c4
     name: py-day
     env:
     - name: DB_HOST
