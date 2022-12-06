@@ -47,7 +47,7 @@ spec:
             secretKeyRef:
               name: munji-secret
               key: DB_PW
-        image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-backend:da0c5be0884f3f3e4f983855b6ad24377fb29215
+        image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-backend:11a1e6ac04821f8bef618c05f571fa198201cfec
         name: munji-back
         ports:
         - containerPort: 8080
