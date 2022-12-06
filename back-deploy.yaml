@@ -32,16 +32,6 @@ spec:
             configMapKeyRef:
               name: munji-cm
               key: DB_USER
-        - name: KAKAO_API_KEY
-          valueFrom:
-            secretKeyRef:
-              name: munji-secret
-              key: KAKAO_API_KEY
-        - name: OPEN_API_KEY
-          valueFrom:
-            secretKeyRef:
-              name: munji-secret
-              key: OPEN_API_KEY
         - name: SPRING_DATASOURCE_PASSWORD
           valueFrom:
             secretKeyRef:
