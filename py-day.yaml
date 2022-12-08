@@ -13,7 +13,7 @@ spec:
       template:
         spec:
           containers:
-          - image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-database-day:f38b7274f846119de64434c0795962617cc8b357
+          - image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-database-day:3970f59e27d4a1cedc5f38024c7e0396ae225dbd
             name: py-day
             env:
             - name: DB_HOST
