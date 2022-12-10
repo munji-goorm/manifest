@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: munji-front
-        image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-frontend:45f1263b926231fc535a2e85edfe90e9e9993864
+        image: 320451040304.dkr.ecr.ap-northeast-2.amazonaws.com/munji-frontend:0d189f7880c12377b60cc3e8b65f32f361d49a10
         ports:
         - containerPort: 3000
         resources:
